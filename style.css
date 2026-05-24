@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+.navbar {
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.section-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  background: #0d6efd;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+@media (max-width: 992px) {
+  .navbar-brand { font-size: 1.55rem; }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand { font-size: 1.4rem; }
+  h1.display-4 { font-size: 2.2rem; }
+  .section-title { font-size: 1.85rem; }
+  .container { padding-left: 15px !important; padding-right: 15px !important; }
+  .card-body { padding: 1.25rem; }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand { font-size: 1.3rem; }
+  h1, h2 { font-size: 1.7rem; }
+  .lead { font-size: 1.1rem; }
+  .btn-lg { padding: 12px 25px; font-size: 1.05rem; }
+  .modal-body ul li { font-size: 0.95rem; }
+}
